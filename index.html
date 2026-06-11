@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>VS Code 安装 Codex 插件教程：下载、配置与使用完整指南</title>
+  <meta name="description" content="VS Code Codex 插件安装与使用教程，包含 Codex 插件下载、安装配置、Key 接入、嵌入使用、快捷键说明及常见问题解决。" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", Arial, sans-serif;
+      line-height: 1.8;
+      color: #222;
+      background: #f6f8fa;
+    }
+
+    .container {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .article {
+      background: #fff;
+      padding: 36px;
+      border-radius: 14px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+    }
+
+    h1 {
+      font-size: 32px;
+      line-height: 1.35;
+      color: #111;
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      margin-top: 40px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #e5e7eb;
+      font-size: 24px;
+    }
+
+    h3 {
+      margin-top: 28px;
+      font-size: 20px;
+    }
+
+    p {
+      margin: 14px 0;
+    }
+
+    ul, ol {
+      padding-left: 24px;
+    }
+
+    a {
+      color: #0969da;
+      text-decoration: none;
+      word-break: break-all;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    code {
+      background: #f3f4f6;
+      padding: 2px 6px;
+      border-radius: 5px;
+      font-family: Consolas, Monaco, monospace;
+    }
+
+    .intro {
+      padding: 16px 20px;
+      background: #f0f6ff;
+      border-left: 4px solid #0969da;
+      border-radius: 8px;
+      margin: 24px 0;
+    }
+
+    .notice {
+      padding: 16px 20px;
+      background: #fff8e1;
+      border-left: 4px solid #f59e0b;
+      border-radius: 8px;
+      margin: 24px 0;
+    }
+
+    .card {
+      padding: 18px 20px;
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      margin: 16px 0;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #666;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .article {
+        padding: 24px 18px;
+      }
+
+      h1 {
+        font-size: 26px;
+      }
+
+      h2 {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <article class="article">
+      <h1>VS Code 安装 Codex 插件教程：下载、配置与使用完整指南</h1>
+
+      <div class="intro">
+        本教程面向想在 <strong>VS Code</strong> 中使用 <strong>OpenAI Codex 插件</strong> 的用户，内容包括 VS Code 介绍、Codex 介绍、插件安装、Key 配置和基础使用方法。
+      </div>
+
+      <h2>01. VS Code 是什么？</h2>
+
+      <p>
+        VS Code（Visual Studio Code）是 Microsoft 推出的免费代码编辑器。你可以把它理解为一个专门用于写代码和管理项目的工作台。
+      </p>
+
+      <p>它本身不局限于某一种语言，而是通过插件支持多种开发场景：</p>
+
+      <ul>
+        <li>前端开发（HTML / CSS / JavaScript）</li>
+        <li>后端开发（Python / Node.js / Go 等）</li>
+        <li>脚本与自动化</li>
+        <li>Web、桌面应用等多类项目</li>
+      </ul>
+
+      <p>
+        VS Code 的特点是 <strong>轻量、灵活、扩展性强</strong>，非常适合和 AI 编程助手搭配使用。
+      </p>
+
+      <h2>02. Codex 是什么？</h2>
+
+      <p>
+        Codex 是面向编程场景的 AI 模型，相比普通聊天助手，它更擅长处理代码相关任务。
+      </p>
+
+      <p>Codex 通常可以帮助你完成：</p>
+
+      <ul>
+        <li>理解代码结构和上下文</li>
+        <li>根据需求生成完整代码</li>
+        <li>修改、补全、重构已有代码</li>
+        <li>解释代码逻辑与报错原因</li>
+      </ul>
+
+      <p>在 VS Code 中使用 Codex 后，你可以直接在编辑器里：</p>
+
+      <ul>
+        <li>用自然语言描述功能需求</li>
+        <li>让 AI 生成或补全代码</li>
+        <li>基于当前项目做定向修改</li>
+      </ul>
+
+      <p>
+        你可以把它理解为一个随时可用的编程助手，帮助你更快把想法变成可运行的代码。
+      </p>
+
+      <h2>03. VS Code 安装 Codex 插件</h2>
+
+      <ol>
+        <li>打开 VS Code。</li>
+        <li>进入左侧扩展市场（Extensions）。</li>
+        <li>
+          在扩展商店搜索：
+          <code>Codex – OpenAI’s coding agent</code>
+          ，然后点击安装。
+        </li>
+        <li>安装完成后，右侧活动栏会出现 Codex 图标。</li>
+      </ol>
+
+      <div class="notice">
+        如果此时还无法正常使用，通常是因为还没有完成后面的 Key 与环境配置。
+      </div>
+
+      <h2>04. Codex 接入 VS Code（Key 与配置）</h2>
+
+      <h3>4.1 先获取可用 Key</h3>
+
+      <p>
+        插件安装完成后，还需要先配置 Key，Codex 才能真正使用。由于网络原因，部分国内用户可能无法稳定连接官网地址，因此可以使用中转 Key。
+      </p>
+
+      <div class="card">
+        <strong>Codex 中转 Key 注册地址：</strong><br />
+        <a href="https://codex.dakeai.cc/register?promo=DKAI" target="_blank" rel="nofollow noopener noreferrer">
+          https://codex.dakeai.cc/register?promo=DKAI
+        </a>
+      </div>
+
+      <h3>4.2 中转站创建密钥并覆盖配置</h3>
+
+      <ol>
+        <li>注册并登录中转平台。</li>
+        <li>进入 API 密钥页面。</li>
+        <li>创建 Codex 分组密钥。</li>
+        <li>进入“使用密钥”页面。</li>
+        <li>选择“覆盖配置脚本”方法。</li>
+        <li>按照页面提示覆盖 Codex 配置。</li>
+      </ol>
+
+      <p>
+        覆盖配置完成后，就可以开始在 VS Code 中使用 Codex 插件。
+      </p>
+
+      <h2>05. Codex VS Code 插件用法</h2>
+
+      <p>配置完成后，你可以在 VS Code 中进行以下操作：</p>
+
+      <ul>
+        <li>打开项目文件夹，让 Codex 读取当前项目上下文。</li>
+        <li>在 Codex 面板中输入你的需求，例如“帮我写一个登录页面”。</li>
+        <li>让 Codex 根据当前文件内容生成、修改或解释代码。</li>
+        <li>遇到报错时，可以把报错信息发给 Codex，让它分析原因。</li>
+      </ul>
+
+      <h2>06. VS Code Codex 快捷键说明</h2>
+
+      <p>
+        Codex 插件的具体快捷键可能会随着版本更新而变化。你可以在 VS Code 中查看或修改快捷键：
+      </p>
+
+      <ol>
+        <li>打开 VS Code。</li>
+        <li>点击左下角设置图标。</li>
+        <li>进入 Keyboard Shortcuts（键盘快捷方式）。</li>
+        <li>搜索 <code>Codex</code>。</li>
+        <li>查看当前可用快捷键，或根据自己的习惯重新绑定。</li>
+      </ol>
+
+      <h2>07. 常见问题</h2>
+
+      <h3>1. 为什么安装插件后不能直接使用？</h3>
+      <p>
+        通常是因为还没有配置 Key。安装插件只是完成了 VS Code 端的接入，仍然需要可用 Key 才能正常调用 Codex。
+      </p>
+
+      <h3>2. 搜不到 Codex 插件怎么办？</h3>
+      <p>
+        可以确认 VS Code 是否为最新版本，并检查扩展市场网络是否正常。也可以搜索关键词
+        <code>OpenAI Codex</code> 或 <code>Codex coding agent</code>。
+      </p>
+
+      <h3>3. VS Code 和 Visual Studio 是同一个软件吗？</h3>
+      <p>
+        不是。VS Code 是轻量级代码编辑器，Visual Studio 是完整 IDE。本文主要介绍的是 VS Code 安装 Codex 插件教程。
+      </p>
+
+      <h2>08. 总结</h2>
+
+      <p>
+        通过以上步骤，你就可以完成 VS Code 安装 Codex 插件、Key 配置和基础使用。配置成功后，Codex 可以直接嵌入 VS Code，帮助你生成代码、解释代码、修改项目和排查报错。
+      </p>
+
+      <footer>
+        本页面仅用于 VS Code Codex 插件安装与使用教程整理，请以实际插件页面和官方说明为准。
+      </footer>
+    </article>
+  </main>
+</body>
+</html>
